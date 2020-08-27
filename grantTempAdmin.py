@@ -75,7 +75,7 @@ launchdFile = 'com.jamfps.adminremove.plist'                                # la
 launchdLabel = launchdFile.replace('.plist', '')                            # launch daemon label
 plistFile = 'MakeMeAdmin.plist'                                             # settings file name
 tempAdminLog = 'tempAdmin.log'                                              # script log file
-adminTimer = 1800                                                           # how long should they have admin rights for (in seconds)
+adminTimer = int(sys.argv[4])                                               # Updated to use the parameter 4 field in jamf to specify how long should they have admin rights for (in seconds). Replace "int(sys.argv[4])" with an integer if you want to hardcode the script
 policyCustomTrigger = 'adminremove'                                         # custom trigger specified for removeTempAdmin.py policy
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
